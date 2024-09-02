@@ -1,14 +1,25 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/home/Home"
-
+import Navbar from "./components/navbar/Navbar"
+import Footer from "./components/footer/Footer"
+import Cadastro from "./pages/cadastro/cadastro"
 
 function App() {
   //fora do return código typescript
   return (
-    // dentro do return é o código tsx => HTML + CSS
-    <> <Home /> </>
-    // essa tag 'fantasma' se chama fragment, e é usada para envolver o conteudo, 
-    //o react impõe essa condição quando possui mais de um conteudo,
-    // no caso temos um titulo e um subtitulo
+    <>
+    <BrowserRouter>
+      <Navbar />
+      <div className="min-h-[80vh]">
+                <Routes> {/* routes - é o gerenciador de rotas, vai decidir oq pode ser renderizado em qualquer componente do app*/}
+          <Route path="/" element={<Home />} />  {/* route - rota propriamente dita // path - vai definir o caminho da rota */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/cadastro" element={<Cadastro />} />
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  </>
   )
 }
 
