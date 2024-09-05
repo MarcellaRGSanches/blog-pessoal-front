@@ -18,7 +18,7 @@ function Footer() {
           <p className='font-bold text-xl'>
             Blog Pessoal Generation | Copyright: {data}
           </p>
-          <p className='text-lg'>Acesse nossas redes sociais</p>
+          <p className='text-lg'>Acesse nossas redes sociais: </p>
           <div className='flex gap-2'>
             <a href="https://www.linkedin.com/in/marcellargsanches/" target="_blank">
               <LinkedinLogo size={42} />

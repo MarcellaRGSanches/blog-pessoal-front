@@ -20,6 +20,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                         {postagem.usuario?.nome}
                     </h3>
                 </div>
+
                 <div className='p-4 '>
                     <h4 className='text-lg font-semibold uppercase'>{postagem.titulo}</h4>
                     <p>{postagem.texto}</p>
@@ -30,6 +31,7 @@ function CardPostagem({ postagem }: CardPostagensProps) {
                     }).format(new Date(postagem.data))}</p>
                 </div>
             </div>
+
             <div className="flex">
                 <Link to={`/editarpostagem/${postagem.id}`}
                     className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
